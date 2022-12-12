@@ -1,0 +1,1899 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: black;
+    font-family: 'Font-awesome', sans-serif;
+    position: relative;
+}
+
+/* Subscription */
+
+.subscription {
+    height: 50px;
+    color: #fff;
+    animation: myanimation 10s infinite;
+    position: sticky;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    max-width: 1500px;
+    margin: auto;
+}
+
+.navbar div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 50px;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+}
+
+.navbar p {
+    font-size: 12px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.35s ease;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.navbar ul a:hover {
+    background-color: #bd1231;
+    color: #fff;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.navbar ul li {
+    list-style: none;
+    padding-right: 20px;
+    position: relative;
+}
+
+.navbar .dropdown-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    z-index: 1;
+    display: none;
+}
+
+.navbar .dropdown-menu-item {
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(54, 54, 54);
+    border-bottom: 1px solid rgb(114, 114, 114); 
+    transition: background-color 0.35s ease;
+}
+
+.navbar .dropdown-menu-item a {
+    color: #fff;
+}
+
+.navbar .dropdown-menu-item:hover {
+    background-color: #bd1231;
+}
+
+.navbar ul li:hover > .dropdown-menu{
+    display: flex;
+}
+
+.navbar i {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.navbar #menuOverlay {
+    display: visible;
+}
+
+.navbar-overlay {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.navbar-overlay a {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-overlay h1 {
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+}
+
+.navbar-overlay p {
+    font-size: 10px;
+}
+
+.navbar-overlay .list-flex {
+    padding: 40px;
+    line-height: 40px;
+}
+
+.navbar-overlay .list-flex ul {
+    list-style: none;
+}
+
+.navbar-overlay i {
+    font-size: 20px;
+    position: fixed;
+    right: 20px;
+}
+
+/* Cookies */
+.cookies {
+    position: fixed;
+    border: 1px rgb(114, 114, 114) solid;
+    background-color: #fff;
+    color: black;
+    right: 0;
+    bottom: 0;
+    margin: 30px 30px;
+    z-index: 1;
+    height: 180px;
+    width: 450px;
+    padding: 20px;
+    padding-right: 50px;
+}
+
+.cookies-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 5px;
+    padding: 3px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cookies .cookies-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.cookies .cookies-settings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+    text-transform: uppercase;
+    gap: 5px;
+}
+
+.cookies .cookies-buttons {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cookies .cookies-buttons a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+}
+
+.cookies .cookies-buttons .button-accept {
+    border: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Header */
+.header {
+    height: 700px;
+    overflow: hidden;
+    border-top: 1px solid black;
+    margin-top: 40px;
+}
+
+.header img {
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    object-position: start;
+    animation: zoom-in-zoom-out 10s ease infinite;
+}
+
+/* Collection */
+.collection {
+    margin-top: 80px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.collection h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+}
+
+.collection p {
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #bd1231;
+    margin-bottom: 40px;
+}
+
+.grid {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin: auto;
+}
+
+.grid div {
+    position: relative;
+    max-width: 400px;
+}
+
+.grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.grid .image-overlay {
+    position: absolute;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.35s;
+}
+
+.grid .image-overlay:hover {
+    opacity: 1;
+}
+
+.grid .image-overlay:hover > .image-title {
+    transform: translateY(0%);
+}
+
+.grid .image-title {
+    width: 100%;
+    transform: translateY(40%);
+    transition: all 0.20s ease-in-out;
+}
+
+.grid .image-title p{
+    color: #fff;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    text-transform: uppercase;
+}
+
+/* Autumn collection */
+.autumn-collection-background {
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    margin-top: 100px;
+}
+
+.autumn-collection-background img{
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    object-position: start;
+    animation: zoom-in-zoom-out 10s ease infinite;
+    opacity: 0.6;
+}
+
+.autumn-collection {
+    margin-top: 180px;
+    margin-right: 5%;
+    text-align: right;
+    max-width: 1000px;
+    margin-left: auto;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.autumn-collection h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+    color: black;
+}
+
+.autumn-collection p {
+    max-width: 800px;
+    margin-left: auto;
+    letter-spacing: 3px;
+    text-align: right;
+}
+
+.autumn-collection .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.autumn-collection .grid-4 div {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 400px;
+    transition: all 0.3s ease-in;
+}
+
+.autumn-collection .grid-4 div:hover {
+    transform: scale(1.1);
+}
+
+.autumn-collection .grid-4 div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Slideshow */
+.slideshow {
+    text-align: center;
+    margin-top: 60px;
+    overflow: hidden;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.slideshow h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+}
+
+.slideshow .lead {
+    font-size: 20px;
+    color: #bd1231;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+.slideshow p {
+    font-size: 14px;
+    padding: 10px;
+}
+
+/*.slideshow-images {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.slideshow-images div {
+    height: 600px;
+}
+
+.slideshow-images div img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.slideshow-images p {
+    color:black;
+    font-size: 14px;
+    letter-spacing: 1px;
+}*/
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+  
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+  
+.swiper-slide img {
+    height: 100%;
+    width: 90%;
+    object-fit: contain;
+}
+
+/* Form */
+.email {
+    background: url('images/bg2.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    color: #fff;
+    margin-top: 150px;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.email .container {
+    max-width: 1800px;
+    height: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.email .container .checkboxes {
+    margin-top: 10px;
+}
+
+.email .container .checkboxes input {
+    margin-right: 6px;
+}
+
+.email .container .checkboxes label {
+    margin-right: 30px;
+}
+
+.email .container .left h1 {
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+}
+
+.email .container .left p {
+    margin-top: 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.email .container .right {
+    text-align: left;
+}
+
+.email .container .right .enter {
+    height: 40px;
+    width: 300px;
+    margin-right: 40px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.email .container .right .checkboxes{
+    margin-right: 30px;
+}
+
+.email .container .right .accept {
+    margin-top: 10px;
+}
+
+.email .container .right .accept a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.email .container .right button {
+    background-color: black;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    letter-spacing: 1.3px;
+}
+
+/* Comma Fasion */
+
+.comma-fashion {
+    height: 700px;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.comma-fashion img{
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    object-position: start;
+    animation: zoom-in-zoom-out 10s ease infinite;
+    opacity: 0.6;
+}
+
+.comma-fashion, .comma-fashion-text {
+    margin-top: 100px
+}
+
+.comma-fashion-text {
+    padding: 80px;
+    max-width: 1100px;
+    color: black;
+}
+
+.comma-fashion-text h1 {
+    font-size: 3rem;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+}
+
+.comma-fashion-text p {
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.comma-fashion-pictures {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 100px;
+    gap: 40px;
+    overflow: visible;
+}
+
+.comma-fashion-pictures div {
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all 0.3s ease-in;
+}
+
+.comma-fashion-pictures div:hover {
+    transform: scale(1.1);
+}
+
+.comma-fashion-pictures div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(54, 54, 54);
+    color: #fff;
+    display: flex;
+    padding: 80px 160px;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-family: 'Hepta Slab', serif;
+    font-weight: 300px;
+    letter-spacing: 2px;
+}
+
+footer a p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+footer i {
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+footer li {
+    list-style: none;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+.right {
+    margin-left: 200px;
+}
+
+.right .row ul {
+    margin-right: 60px;
+    line-height: 40px;
+}
+
+@keyframes myanimation {
+    0% {background-color: red;}
+    25%{background-color:yellow;}
+    50%{background-color:green;}
+    75%{background-color:brown;}
+    100% {background-color: red;}
+  }
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: zoom(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@media(max-width: 499px) {
+    .subscription {
+        font-size: 12px;
+    }
+
+    .navbar {
+        position: relative;
+    }
+
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navabr p {
+        font-size: 12px;
+    }
+
+    .navbar i {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+    .navbar div {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .header {
+        height: 200px;
+    }
+
+    .collection h1 {
+        font-size: 20px;
+    }
+
+    .collection p {
+        font-size: 14px;
+    }
+
+    .collection .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .collection .grid div {
+        height: 200px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .collection .grid img {
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .cookies {
+        bottom: 0;
+        left: 0;
+        margin: 0px;
+    }
+
+    .autumn-collection {
+        margin-top: 140px;
+    }
+
+    .autumn-collection-background {
+        height: 400px;
+    }
+
+    .autumn-collection h1 {
+        font-size: 20px;
+    }
+
+    .autumn-collection p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0px 10px;
+    }
+
+    .autumn-collection .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 30px 10px;
+    }
+
+    .autumn-collection .grid-4 div {
+        height: 200px;
+    }
+
+    .autumn-collection .grid-4 div img {
+        object-position: top;
+    }
+    
+    .autumn-collection .grid-4 .div4{
+        display: none;
+    }
+
+    .email {
+        background: url('images/bg2.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+        color: #fff;
+        margin-top: 150px;
+        overflow: hidden;
+        font-size: 18px;
+    }
+    
+    .email .container {
+        display: block;
+    }
+    
+    .email .container .checkboxes {
+        margin-top: 10px;
+    }
+    
+    .email .container .checkboxes input {
+        margin-right: 6px;
+    }
+    
+    .email .container .checkboxes label {
+        margin-right: 30px;
+    }
+    
+    .email .container .left h1 {
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+    
+    .email .container .left p {
+        margin-top: 10px;
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+    .email .container .right {
+        text-align: center;
+    }
+    
+    .email .container .right .enter {
+        height: 40px;
+        width: 300px;
+        margin-right: 40px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    
+    .email .container .right .checkboxes{
+        margin-right: 30px;
+    }
+    
+    .email .container .right .accept {
+        margin-top: 10px;
+    }
+    
+    .email .container .right .accept a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .email .container .right button {
+        background-color: black;
+        color: #fff;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+    }
+
+    .email .container .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slideshow h1 {
+        font-size: 26px;
+        margin-bottom: 0px;
+    }
+
+    .slideshow p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .slideshow {
+        margin-top: 0px;
+    }
+
+    .slideshow .lead {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .comma-fashion {
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .comma-fashion, .comma-fashion-text {
+        margin-top: 20px
+    }
+
+    .comma-fashion-text {
+        padding: 20px;
+        max-width: 1100px;
+        color: black;
+    }
+
+    .comma-fashion-text h1 {
+        font-size: 2rem;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    .comma-fashion-text p {
+        font-size: 18px;
+        letter-spacing: 3px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .comma-fashion-pictures {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 0px;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .comma-fashion-pictures div:last-child {
+        display: none;
+    }
+
+    .comma-fashion-pictures div {
+        height: 300px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: all 0.3s ease-in;
+    }
+
+    .comma-fashion-pictures div img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        background-color: rgb(54, 54, 54);
+        color: #fff;
+        display: flex;
+        padding: 0px;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer h1 {
+        margin-bottom: 0px;
+        font-size: 40px;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    footer a p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display: flex;
+        gap: 0px;
+        height: 100%;
+    }
+
+    .right {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right .row ul {
+        margin-right: 0px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 650px) and (min-width: 500px) {
+    .subscription {
+        font-size: 12px;
+    }
+
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navabr p {
+        font-size: 12px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+    
+    .header {
+        height: 200px;
+    }
+
+    .collection h1 {
+        font-size: 30px;
+    }
+
+    .collection p {
+        font-size: 16px;
+    }
+
+    .collection .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .collection .grid div {
+        height: 300px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .collection .grid img {
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    .cookies {
+        bottom: 0;
+        left: 0;
+        margin: 0px;
+    }
+
+    .autumn-collection {
+        margin-top: 140px;
+    }
+
+    .autumn-collection-background {
+        height: 400px;
+    }
+
+    .autumn-collection h1 {
+        font-size: 20px;
+    }
+
+    .autumn-collection p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0px 10px;
+    }
+
+    .autumn-collection .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 30px 10px;
+    }
+
+    .autumn-collection .grid-4 div {
+        height: 200px;
+    }
+
+    .autumn-collection .grid-4 div img {
+        object-position: top;
+    }
+    
+    .autumn-collection .grid-4 .div4 {
+        display: none;
+    }
+
+    .email {
+        background: url('images/bg2.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+        color: #fff;
+        margin-top: 150px;
+        overflow: hidden;
+        font-size: 18px;
+    }
+    
+    .email .container {
+        display: block;
+    }
+    
+    .email .container .checkboxes {
+        margin-top: 10px;
+    }
+    
+    .email .container .checkboxes input {
+        margin-right: 6px;
+    }
+    
+    .email .container .checkboxes label {
+        margin-right: 30px;
+    }
+    
+    .email .container .left h1 {
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+    
+    .email .container .left p {
+        margin-top: 10px;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+    .email .container .right {
+        text-align: center;
+    }
+    
+    .email .container .right .enter {
+        height: 40px;
+        width: 300px;
+        margin-right: 40px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    
+    .email .container .right .checkboxes{
+        margin-right: 30px;
+    }
+    
+    .email .container .right .accept {
+        margin-top: 10px;
+    }
+    
+    .email .container .right .accept a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .email .container .right button {
+        background-color: black;
+        color: #fff;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+    }
+
+    .email .container .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slideshow h1 {
+        font-size: 26px;
+        margin-bottom: 0px;
+    }
+
+    .slideshow p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .header {
+        margin-top: 10px;
+    }
+
+    .subscription {
+        margin-bottom: 10px;
+    }
+
+    .slideshow {
+        margin-top: 0px;
+    }
+
+    .slideshow .lead {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .comma-fashion {
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .comma-fashion, .comma-fashion-text {
+        margin-top: 20px
+    }
+
+    .comma-fashion-text {
+        padding: 20px;
+        max-width: 1100px;
+        color: black;
+    }
+
+    .comma-fashion-text h1 {
+        font-size: 2rem;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    .comma-fashion-text p {
+        font-size: 18px;
+        letter-spacing: 3px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .comma-fashion-pictures {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 0px;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .comma-fashion-pictures div:last-child {
+        display: none;
+    }
+
+    .comma-fashion-pictures div {
+        height: 300px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: all 0.3s ease-in;
+    }
+
+    .comma-fashion-pictures div img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        background-color: rgb(54, 54, 54);
+        color: #fff;
+        display: flex;
+        padding: 0px;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer h1 {
+        margin-bottom: 0px;
+        font-size: 40px;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    footer a p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display: flex;
+        gap: 0px;
+        height: 100%;
+    }
+
+    .right {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right .row ul {
+        margin-right: 0px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 651px) {
+    .subscription {
+        font-size: 16px;
+    }
+
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navabr p {
+        font-size: 12px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .header {
+        height: 300px;
+    }
+
+    .collection h1 {
+        font-size: 30px;
+    }
+
+    .collection p {
+        font-size: 16px;
+    }
+
+    .collection .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .collection .grid div {
+        height: 300px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .collection .grid img {
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    .cookies {
+        bottom: 0;
+        left: 0;
+        margin: 0px;
+    }
+
+    .autumn-collection {
+        margin-top: 140px;
+    }
+
+    .autumn-collection-background {
+        height: 400px;
+    }
+
+    .autumn-collection h1 {
+        font-size: 20px;
+    }
+
+    .autumn-collection p {
+        font-size: 14px;
+        letter-spacing: 1px;
+        margin: 0px 10px;
+    }
+
+    .autumn-collection .grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin: 30px 10px;
+    }
+
+    .autumn-collection .grid-4 div {
+        height: 300px;
+    }
+
+    .autumn-collection .grid-4 div img {
+        object-position: top;
+    }
+    
+    .autumn-collection .grid-4 .div4 {
+        display: none;
+    }
+
+    .email {
+        background: url('images/bg2.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+        color: #fff;
+        margin-top: 150px;
+        overflow: hidden;
+        font-size: 18px;
+    }
+    
+    .email .container {
+        display: block;
+    }
+    
+    .email .container .checkboxes {
+        margin-top: 10px;
+    }
+    
+    .email .container .checkboxes input {
+        margin-right: 6px;
+    }
+    
+    .email .container .checkboxes label {
+        margin-right: 30px;
+    }
+    
+    .email .container .left h1 {
+        font-size: 50px;
+        text-align: center;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+    
+    .email .container .left p {
+        margin-top: 10px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+    .email .container .right {
+        text-align: center;
+    }
+    
+    .email .container .right .enter {
+        height: 40px;
+        width: 300px;
+        margin-right: 40px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    
+    .email .container .right .checkboxes{
+        margin-right: 30px;
+    }
+    
+    .email .container .right .accept {
+        margin-top: 10px;
+    }
+    
+    .email .container .right .accept a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .email .container .right button {
+        background-color: black;
+        color: #fff;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+    }
+
+    .email .container .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slideshow h1 {
+        font-size: 26px;
+        margin-bottom: 0px;
+    }
+
+    .slideshow p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .header {
+        margin-top: 10px;
+    }
+
+    .subscription {
+        margin-bottom: 10px;
+    }
+
+    .slideshow {
+        margin-top: 0px;
+    }
+
+    .slideshow .lead {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .comma-fashion {
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .comma-fashion, .comma-fashion-text {
+        margin-top: 20px
+    }
+
+    .comma-fashion-text {
+        padding: 20px;
+        max-width: 1100px;
+        color: black;
+    }
+
+    .comma-fashion-text h1 {
+        font-size: 2rem;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    .comma-fashion-text p {
+        font-size: 18px;
+        letter-spacing: 3px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .comma-fashion-pictures {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 0px;
+        gap: 20px;
+        overflow: visible;
+    }
+
+    .comma-fashion-pictures div:last-child {
+        display: none;
+    }
+
+    .comma-fashion-pictures div {
+        height: 350px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: all 0.3s ease-in;
+    }
+
+    .comma-fashion-pictures div img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        background-color: rgb(54, 54, 54);
+        color: #fff;
+        display: flex;
+        padding: 0px;
+        overflow: hidden;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer h1 {
+        margin-bottom: 0px;
+        font-size: 40px;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    footer a p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        display: flex;
+        gap: 0px;
+        height: 100%;
+    }
+
+    .right {
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right .row ul {
+        margin-right: 0px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 1150px) and (min-width: 901px) {
+    .subscription {
+        font-size: 16px;
+    }
+
+    .navbar div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .navbar h1 {
+        font-size: 30px;
+    }
+
+    .navabr p {
+        font-size: 12px;
+    }
+
+    .navbar ul li {
+        font-size: 14px;
+        padding-right: 0px;
+    }
+
+    .header {
+        height: 400px;
+    }
+
+    .collection h1 {
+        font-size: 40px;
+    }
+
+    .collection p {
+        font-size: 18px;
+    }
+
+    .collection .grid {
+        gap: 10px;
+    }
+
+    .collection .grid div {
+        height: 400px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .collection .grid img {
+        object-fit: cover;
+        object-position: top;
+    }
+    
+    .cookies {
+        bottom: 0;
+        left: 0;
+        margin: 0px;
+    }
+
+    .autumn-collection {
+        margin-top: 140px;
+    }
+
+    .autumn-collection-background {
+        height: 300px;
+    }
+
+    .autumn-collection h1 {
+        font-size: 30px;
+    }
+
+    .autumn-collection p {
+        font-size: 20px;
+        letter-spacing: 1px;
+        margin: 0px 10px;
+    }
+
+    .autumn-collection .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin: 30px 10px;
+    }
+
+    .autumn-collection .grid-4 div {
+        height: 350px;
+    }
+
+    .autumn-collection .grid-4 div img {
+        object-position: top;
+    }
+
+    .email {
+        background: url('images/bg2.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 400px;
+        color: #fff;
+        margin-top: 150px;
+        overflow: hidden;
+        font-size: 18px;
+    }
+    
+    .email .container .checkboxes {
+        margin-top: 10px;
+    }
+    
+    .email .container .checkboxes input {
+        margin-right: 6px;
+    }
+    
+    .email .container .checkboxes label {
+        margin-right: 30px;
+    }
+    
+    .email .container .left h1 {
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+    
+    .email .container .left p {
+        margin-top: 10px;
+        font-size: 20px;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    
+    .email .container .right {
+        text-align: left;
+    }
+    
+    .email .container .right .enter {
+        height: 40px;
+        width: 300px;
+        margin-right: 40px;
+        padding: 10px;
+        border: none;
+        margin-bottom: 20px;
+    }
+    
+    .email .container .right .checkboxes{
+        margin-right: 30px;
+    }
+    
+    .email .container .right .accept {
+        margin-top: 10px;
+    }
+    
+    .email .container .right .accept a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .email .container .right button {
+        background-color: black;
+        color: #fff;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 15px;
+        letter-spacing: 1.3px;
+    }
+
+    .slideshow h1 {
+        font-size: 40px;
+        margin-bottom: 0px;
+    }
+
+    .slideshow p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .header {
+        margin-top: 10px;
+    }
+
+    .subscription {
+        margin-bottom: 10px;
+    }
+
+    .slideshow {
+        margin-top: 0px;
+    }
+
+    .slideshow .lead {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .comma-fashion {
+        height: 500px;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .comma-fashion, .comma-fashion-text {
+        margin-top: 20px
+    }
+
+    .comma-fashion-text {
+        padding: 20px;
+        max-width: 1100px;
+        color: black;
+    }
+
+    .comma-fashion-text h1 {
+        font-size: 3rem;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+
+    .comma-fashion-text p {
+        font-size: 18px;
+        letter-spacing: 3px;
+        line-height: 1.6;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .comma-fashion-pictures {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 0px;
+        gap: 30px;
+        overflow: visible;
+    }
+
+    .comma-fashion-pictures div {
+        height: 350px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        transition: all 0.3s ease-in;
+    }
+
+    .comma-fashion-pictures div img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    footer {
+        background-color: rgb(54, 54, 54);
+        color: #fff;
+        display: flex;
+        padding: 20px;
+        overflow: hidden;
+    }
+    
+    footer a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    footer h1 {
+        margin-bottom: 10px;
+        font-size: 40px;
+        font-family: 'Hepta Slab', serif;
+        font-weight: 300px;
+        letter-spacing: 2px;
+    }
+    
+    footer a p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    
+    footer i {
+        font-size: 20px;
+        margin-right: 16px;
+    }
+    
+    footer li {
+        list-style: none;
+    }
+    
+    .row {
+        display: flex;
+        gap: 0px;
+    }
+    
+    .right {
+        margin-left: 100px;
+    }
+    
+    .right .row ul {
+        margin-right: 20px;
+        line-height: 40px;
+    }
+}
+
+@media (min-width:400px){
+    .navbar-overlay .list-flex {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px){
+    .navbar {
+        position: relative;
+    }
+}
+
+@media (min-width: 900px){
+    .navbar #menuOverlay {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1151px) {
+    .navbar ul li{
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}
